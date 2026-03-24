@@ -68,4 +68,24 @@
 const btn = document.getElementById('btn');
 const magicText = document.getElementById('magicText');
 
-function getRandomColor()
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+let interval;
+
+btn.addEventListener('click', () => {
+    magicText.style.display = 'block';
+    if(interval) clearInterval(interval);
+    interval = setInterval(() => {
+        magicText.style.color = getRandomColor();
+    }, 200);
+});
+</script>
+</body>
+</html>
