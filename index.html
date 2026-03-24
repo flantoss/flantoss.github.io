@@ -11,10 +11,12 @@
             flex-direction: column;
             min-height: 100vh;
             text-align: center;
+            justify-content: flex-start; /* les premiers paragraphes restent en haut */
         }
 
-        .bottom-center {
+        .center-block {
             margin-top: auto;
+            margin-bottom: auto; /* centre verticalement le bloc */
         }
 
         .styled {
@@ -30,7 +32,8 @@
     <p>ET ALORS ??</p>
     <br><br>
 
-    <div class="bottom-center">
+    <!-- Bloc centré verticalement -->
+    <div class="center-block">
         <p>Juste un dernier truc avant de partir ...</p>
         <p>SOB SOB SOB !!!</p>
         <input class="styled" type="button" value="Répondre ⛱️"/>
