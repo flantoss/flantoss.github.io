@@ -9,18 +9,26 @@
     body {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         min-height: 100vh;
         text-align: center;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .center-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
     }
 
     #magicText {
-        font-size: 2em;
+        font-size: 5em;
         font-weight: bold;
-        margin-top: 40px;
+        margin-top: 20px;
         display: none;
-        text-align: center;
+        white-space: nowrap;
     }
 
     .styled {
@@ -59,10 +67,13 @@
 <body>
 <p>OUI ! J'ai codé le site juste pour la vanne...  😔</p>
 <p>ET ALORS ??</p>
-<p>Juste un dernier truc avant de partir ...</p>
-<p>SOB SOB SOB !!!</p>
-<input class="styled" type="button" value="Répondre ⛱️" id="btn"/>
-<div id="magicText">✨ SODOMIE ✨</div>
+
+<div class="center-block">
+    <p>Juste un dernier truc avant de partir ...</p>
+    <p>SOB SOB SOB !!!</p>
+    <input class="styled" type="button" value="Répondre ⛱️" id="btn"/>
+    <div id="magicText">✨ SODOMIE ✨</div>
+</div>
 
 <script>
 const btn = document.getElementById('btn');
