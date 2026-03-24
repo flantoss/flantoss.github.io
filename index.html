@@ -1,37 +1,67 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index.html</title>
-    <link href="style.css" rel="stylesheet">
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            text-align: center;
-            justify-content: flex-start; /* les premiers paragraphes restent en haut */
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Index.html</title>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        text-align: center;
+        justify-content: flex-start;
+    }
+/* AHH OUAII ... tu regardes le code gros gourmand va*/
+    .styled {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
 
-        .center-block {
-            margin-top: auto;
-            margin-bottom: auto; /* centre verticalement le bloc */
-        }
-
-    </style>
+    #magicText {
+        font-size: 5em; 
+        font-weight: bold;
+        margin-top: 40px;
+        display: none; 
+    }
+</style>
 </head>
 <body>
-    <p>OUI ! J'ai codé le site juste pour la vanne...  😔</p>
-    <br>
-    <p>ET ALORS ??</p>
-    <br><br>
+<p>OUI ! J'ai codé le site juste pour la vanne...  😔</p>
+<br>
+<p>ET ALORS ??</p>
+<br><br>
+<p>Juste un dernier truc avant de partir ...</p>
+<p>SOB SOB SOB !!!</p>
+<input class="styled" type="button" value="Répondre ⛱️" id="btn"/>
 
-    <!-- Bloc centré verticalement -->
-    <div class="center-block">
-        <p>Juste un dernier truc avant de partir ...</p>
-        <p>SOB SOB SOB !!!</p>
-        <input class="styled" type="button" value="Répondre ⛱️"/>
-    </div>
+<div id="magicText">✨ SODOMIE ! ✨</div>
+
+<script>
+    const btn = document.getElementById('btn');
+    const magicText = document.getElementById('magicText');
+
+    function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    let interval;
+
+    btn.addEventListener('click', () => {
+        magicText.style.display = 'block';
+
+        if(interval) clearInterval(interval);
+        interval = setInterval(() => {
+            magicText.style.color = getRandomColor();
+        }, 200);
+    });
+</script>
 </body>
 </html>
