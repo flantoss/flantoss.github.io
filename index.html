@@ -9,12 +9,19 @@
         body {
             display: flex;
             flex-direction: column;
-            justify-content: center; 
-            align-items: center;    
-            min-height: 100vh;     
-            text-align: center;   
+            min-height: 100vh;
+            text-align: center;
         }
 
+        .bottom-center {
+            margin-top: auto; /* pousse le div vers le centre vertical inférieur */
+        }
+
+        .styled {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -22,8 +29,12 @@
     <br>
     <p>ET ALORS ??</p>
     <br><br>
-    <p>Juste un dernier truc avant de partir ...</p>
-    <p>SOB SOB SOB !!!</p>
-    <input class="styled" type="button" value="Répondre ⛱️"/>
+
+    <!-- Bloc à descendre au centre -->
+    <div class="bottom-center">
+        <p>Juste un dernier truc avant de partir ...</p>
+        <p>SOB SOB SOB !!!</p>
+        <input class="styled" type="button" value="Répondre ⛱️"/>
+    </div>
 </body>
 </html>
