@@ -4,27 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Index.html</title>
+<link href="style.css" rel="stylesheet">
 <style>
-    body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        text-align: center;
-        justify-content: flex-start;
-    }
-/* AHH OUAII ... tu regardes le code gros gourmand va*/
-    .styled {
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        margin-top: 20px;
-    }
-
+    /* Centrer horizontalement et gérer la taille du texte magique */
     #magicText {
-        font-size: 5em; 
+        font-size: 5em;       /* texte géant */
         font-weight: bold;
         margin-top: 40px;
-        display: none; 
+        display: none;         /* caché au départ */
+        text-align: center;    /* centré horizontalement */
     }
 </style>
 </head>
@@ -37,31 +25,32 @@
 <p>SOB SOB SOB !!!</p>
 <input class="styled" type="button" value="Répondre ⛱️" id="btn"/>
 
-<div id="magicText">✨ SODOMIE ! ✨</div>
+<!-- Texte magique -->
+<div id="magicText">🎉 WOUHOU ! 🎉</div>
 
 <script>
-    const btn = document.getElementById('btn');
-    const magicText = document.getElementById('magicText');
+const btn = document.getElementById('btn');
+const magicText = document.getElementById('magicText');
 
-    function getRandomColor() {
-        const letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
+// Fonction pour générer une couleur aléatoire
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
     }
+    return color;
+}
 
-    let interval;
+let interval;
 
-    btn.addEventListener('click', () => {
-        magicText.style.display = 'block';
-
-        if(interval) clearInterval(interval);
-        interval = setInterval(() => {
-            magicText.style.color = getRandomColor();
-        }, 200);
-    });
+btn.addEventListener('click', () => {
+    magicText.style.display = 'block'; // rendre visible
+    if(interval) clearInterval(interval); // éviter multiples timers
+    interval = setInterval(() => {
+        magicText.style.color = getRandomColor();
+    }, 200);
+});
 </script>
 </body>
 </html>
