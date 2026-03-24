@@ -11,28 +11,34 @@
         flex-direction: column;
         min-height: 100vh;
         text-align: center;
-        justify-content: flex-start;
-        align-items: center;
     }
 
-    .center-block {
+    #top {
+        margin-top: 20px;
+    }
+
+    #center-block {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        flex: 1;
+        flex-grow: 1;
     }
 
     #magicText {
-        font-size: 5em;
+        font-size: 8vw;
         font-weight: bold;
         margin-top: 20px;
         display: none;
+        text-align: center;
         white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 90%;
     }
 
     .styled {
-        margin: auto;
+        margin: 10px auto 0 auto;
         border: 0;
         line-height: 2.5;
         padding: 0 20px;
@@ -65,14 +71,16 @@
 </style>
 </head>
 <body>
+<div id="top">
 <p>OUI ! J'ai codé le site juste pour la vanne...  😔</p>
 <p>ET ALORS ??</p>
+</div>
 
-<div class="center-block">
-    <p>Juste un dernier truc avant de partir ...</p>
-    <p>SOB SOB SOB !!!</p>
-    <input class="styled" type="button" value="Répondre ⛱️" id="btn"/>
-    <div id="magicText">✨ SODOMIE ✨</div>
+<div id="center-block">
+<p>Juste un dernier truc avant de partir ...</p>
+<p>SOB SOB SOB !!!</p>
+<input class="styled" type="button" value="Répondre ⛱️" id="btn"/>
+<div id="magicText">✨ SODOMIE ✨</div>
 </div>
 
 <script>
